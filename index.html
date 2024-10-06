@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr. Hacker Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mr. Hacker Shop</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <h2>Welcome to Mr. Hacker Shop</h2>
+      <p>Your one-stop shop for all things tech!</p>
+    </section>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Product 1" />
+        <h3>Product 1</h3>
+        <p>$19.99</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Product 2" />
+        <h3>Product 2</h3>
+        <p>$29.99</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </section>
+    <footer>
+      <p>© 2024 Mr. Hacker Shop. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
+<script src="scripts.js">
+  document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.buy-btn');
+      buttons.forEach(button => {
+          button.addEventListener('click', () => {
+              alert('Thank you for your purchase!');
+          });
+      });
+  });
+</script>
