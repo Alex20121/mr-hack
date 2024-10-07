@@ -8,15 +8,9 @@ body {
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
@@ -25,6 +19,7 @@ header {
   padding: 1rem;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
+  position: relative;
 }
 
 nav ul {
@@ -47,15 +42,41 @@ nav ul li a:hover {
   color: #f39c12;
 }
 
+#cart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#cart-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+#cart-count-icon {
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  margin-left: -10px;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 section {
   padding: 2rem;
   text-align: center;
   animation: fadeInUp 2s ease-in-out;
 }
 
-.product,
-.carousel-item,
-.testimonial {
+.product, .carousel-item, .testimonial {
   display: inline-block;
   margin: 1rem;
   padding: 1rem;
@@ -65,15 +86,12 @@ section {
   animation: fadeIn 2s ease-in-out;
 }
 
-.product:hover,
-.carousel-item:hover,
-.testimonial:hover {
+.product:hover, .carousel-item:hover, .testimonial:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.buy-btn,
-form button {
+.buy-btn, form button, #checkout-btn {
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -82,8 +100,7 @@ form button {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.buy-btn:hover,
-form button:hover {
+.buy-btn:hover, form button:hover, #checkout-btn:hover {
   background-color: #218838;
   transform: scale(1.1);
 }
@@ -98,8 +115,7 @@ form label {
   margin: 0.5rem 0;
 }
 
-form input,
-form textarea {
+form input, form textarea {
   margin: 0.5rem 0;
   padding: 0.5rem;
   width: 80%;
@@ -107,28 +123,18 @@ form textarea {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.product img,
-.carousel-item img {
+.product img, .carousel-item img {
   width: 150px;
   height: 150px;
   animation: fadeIn 2s ease-in-out;
 }
+
